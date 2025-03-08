@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quem Sou Eu</title>
-</head>
-<body>
-    <div class="sidebar">
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="/">Página Inicial</a></li>
-            <li><a href="/receitas_medicinais/">Receitas Medicinais</a></li>
-            <li><a href="/pesquisas_cientificas/">Pesquisas Científicas</a></li>
-            <li><a href="/quem_sou_eu/">Quem Sou Eu</a></li>
-            <li><a href="/quem_somos_nos/">Quem Somos Nós</a></li>
-        </ul>
-    </div>
+{% extends 'base.html' %}
 
-    <div class="content">
-        <h1>Quem Sou Eu</h1>
-        <p>Aqui você pode falar sobre sua trajetória, experiências e formação.</p>
-    </div>
-</body>
-</html>
+{% block title %}Quem Sou Eu{% endblock %}
+
+{% block content %}
+<h1>Quem Sou Eu</h1>
+<p>Aqui você fala sobre você e sua trajetória.</p>
+{% endblock %}

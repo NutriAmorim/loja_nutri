@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesquisas Científicas</title>
-</head>
-<body>
-    <div class="sidebar">
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="/">Página Inicial</a></li>
-            <li><a href="/receitas_medicinais/">Receitas Medicinais</a></li>
-            <li><a href="/pesquisas_cientificas/">Pesquisas Científicas</a></li>
-            <li><a href="/quem_sou_eu/">Quem Sou Eu</a></li>
-            <li><a href="/quem_somos_nos/">Quem Somos Nós</a></li>
-        </ul>
-    </div>
+{% extends 'base.html' %}
 
-    <div class="content">
-        <h1>Pesquisas Científicas</h1>
-        <p>Aqui você pode listar suas pesquisas científicas e suas descobertas.</p>
-    </div>
-</body>
-</html>
+{% block title %}Pesquisas Científicas{% endblock %}
+
+{% block content %}
+<h1>Pesquisas Científicas</h1>
+<p>Aqui você pode adicionar suas pesquisas científicas e outras informações relevantes.</p>
+{% endblock %}

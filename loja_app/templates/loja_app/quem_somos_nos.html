@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quem Somos Nós</title>
-</head>
-<body>
-    <div class="sidebar">
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="/">Página Inicial</a></li>
-            <li><a href="/receitas_medicinais/">Receitas Medicinais</a></li>
-            <li><a href="/pesquisas_cientificas/">Pesquisas Científicas</a></li>
-            <li><a href="/quem_sou_eu/">Quem Sou Eu</a></li>
-            <li><a href="/quem_somos_nos/">Quem Somos Nós</a></li>
-        </ul>
-    </div>
+{% extends 'base.html' %}
 
-    <div class="content">
-        <h1>Quem Somos Nós</h1>
-        <p>Aqui você pode falar sobre sua equipe e o objetivo do seu projeto.</p>
-    </div>
-</body>
-</html>
+{% block title %}Quem Somos Nós{% endblock %}
+
+{% block content %}
+<h1>Quem Somos Nós</h1>
+<p>Aqui você pode falar sobre a sua equipe e missão.</p>
+{% endblock %}

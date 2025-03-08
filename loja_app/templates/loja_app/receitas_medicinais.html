@@ -1,82 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receitas Medicinais</title>
-    <style>
-        /* Estilo para o corpo da página */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+{% extends 'base.html' %}
 
-        /* Estilo para a barra lateral */
-        .sidebar {
-            width: 250px;
-            background-color: #006400; /* Verde-mata */
-            color: white;
-            padding: 20px;
-            height: 100vh; /* Altura total */
-            position: fixed;
-        }
+{% block title %}Receitas Medicinais{% endblock %}
 
-        /* Estilo para os itens do menu */
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .sidebar ul li {
-            margin: 20px 0;
-        }
-
-        .sidebar ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .sidebar ul li a:hover {
-            color: #FFD700; /* Cor de destaque quando o mouse passa sobre */
-        }
-
-        /* Estilo para o conteúdo */
-        .content {
-            margin-left: 270px; /* Espaço para a barra lateral */
-            padding: 20px;
-            width: calc(100% - 270px); /* Para ocupar o restante da largura */
-        }
-
-        /* Estilo para o título da página */
-        .content h1 {
-            font-size: 28px;
-            color: #006400; /* Cor verde-mata */
-        }
-
-        /* Estilo para o texto */
-        .content p {
-            font-size: 18px;
-        }
-    </style>
-</head>
-<body>
-    <div class="sidebar">
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="/">Página Inicial</a></li>
-            <li><a href="/receitas_medicinais/">Receitas Medicinais</a></li>
-            <li><a href="/pesquisas_cientificas/">Pesquisas Científicas</a></li>
-            <li><a href="/quem_sou_eu/">Quem Sou Eu</a></li>
-            <li><a href="/quem_somos_nos/">Quem Somos Nós</a></li>
-        </ul>
-    </div>
-
-    <div class="content">
-        <h1>Receitas Medicinais</h1>
-        <p>Aqui você pode escrever e listar suas receitas medicinais.</p>
-    </div>
-</body>
-</html>
+{% block content %}
+<h1>Receitas Medicinais</h1>
+<p>Aqui você pode adicionar suas receitas.</p>
+{% endblock %}
