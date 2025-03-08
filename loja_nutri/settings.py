@@ -18,7 +18,7 @@ SECRET_KEY = 'django-insecure-%z7ylaeym@nbj5r+-8ccoyg8)tv92a#y(q_j1(_+#a@ur1=&kk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nutriamorim.com.br', 'www.nutriamorim.com.br']
+ALLOWED_HOSTS = ['nutriapp-8471211a02af.herokuapp.com']
 
 # Application definition
 
