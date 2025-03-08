@@ -47,7 +47,15 @@
 <body>
     <!-- Barra lateral esquerda -->
     <div class="sidebar">
+
+        <div class="logo">
+            <img src="{% static 'img/logo nutri.png' %}" alt="Logo Nutri" />
+        </div>
+
+
         <h2>Menu</h2>
+
+
         <ul>
             <li><a href="{% url 'receitas_medicinais' %}" style="color: white; text-decoration: none;">Receitas Medicinais</a></li>
             <li><a href="{% url 'pesquisas_cientificas' %}" style="color: white; text-decoration: none;">Pesquisas Científicas</a></li>
