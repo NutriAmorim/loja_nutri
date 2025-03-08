@@ -4,6 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receitas Medicinais</title>
+    <style>
+        /* Estilo para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        /* Estilo para a barra lateral */
+        .sidebar {
+            width: 250px;
+            background-color: #006400; /* Verde-mata */
+            color: white;
+            padding: 20px;
+            height: 100vh; /* Altura total */
+            position: fixed;
+        }
+
+        /* Estilo para os itens do menu */
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .sidebar ul li a:hover {
+            color: #FFD700; /* Cor de destaque quando o mouse passa sobre */
+        }
+
+        /* Estilo para o conteúdo */
+        .content {
+            margin-left: 270px; /* Espaço para a barra lateral */
+            padding: 20px;
+            width: calc(100% - 270px); /* Para ocupar o restante da largura */
+        }
+
+        /* Estilo para o título da página */
+        .content h1 {
+            font-size: 28px;
+            color: #006400; /* Cor verde-mata */
+        }
+
+        /* Estilo para o texto */
+        .content p {
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
     <div class="sidebar">

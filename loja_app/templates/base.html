@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrição</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="{% url 'boas_vindas' %}">Boas Vindas</a></li>
+            <li><a href="{% url 'receitas_medicinais' %}">Receitas Medicinais</a></li>
+            <li><a href="{% url 'pesquisas_cientificas' %}">Pesquisas Científicas</a></li>
+            <li><a href="{% url 'quem_sou_eu' %}">Quem Sou Eu</a></li>
+            <li><a href="{% url 'quem_somos_nos' %}">Quem Somos Nós</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>

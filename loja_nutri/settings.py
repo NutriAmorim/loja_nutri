@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-%z7ylaeym@nbj5r+-8ccoyg8)tv92a#y(q_j1(_+#a@ur1=&kk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['nutriamorim.com.br', 'www.nutriamorim.com.br']
 
 # Application definition
 
@@ -37,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'loja_app'
+    'loja_app',
 ]
 
 MIDDLEWARE = [
@@ -55,8 +54,10 @@ ROOT_URLCONF = 'loja_nutri.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
+        'APP_DIRS': True,  # Verifique se isso está habilitado
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
