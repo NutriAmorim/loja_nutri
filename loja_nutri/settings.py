@@ -47,7 +47,7 @@ ROOT_URLCONF = 'loja_nutri.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [str(BASE_DIR / 'loja_app' / 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'loja_app', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
