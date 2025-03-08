@@ -1,0 +1,19 @@
+from django.shortcuts import render
+
+def boas_vindas(request):
+    return render(request, 'boas_vindas.html')
+
+def boas_vindas(request):
+    return render(request, 'boas_vindas.html')
+
+def receitas_medicinais(request):
+    return render(request, 'receitas_medicinais.html')
+
+def pesquisas_cientificas(request):
+    return render(request, 'pesquisas_cientificas.html')
+
+def quem_sou_eu(request):
+    return render(request, 'quem_sou_eu.html')
+
+def quem_somos_nos(request):
+    return render(request, 'quem_somos_nos.html')
