@@ -24,6 +24,13 @@
     max-width: 150px;  /* Largura máxima */
 }
 
+img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+    height: auto;    /* Mantém a proporção da imagem */
+    display: block;  /* Garante que as imagens fiquem em blocos separados */
+    margin-bottom: 10px; /* Adiciona um pequeno espaço entre as imagens */
+}
+
 /* Título do menu */
 .sidebar h2 {
     color: white;
