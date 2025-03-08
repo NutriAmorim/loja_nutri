@@ -1,1 +1,1 @@
-web: gunicorn nutriapp.wsgi
+web: gunicorn loja_nutri.wsgi
