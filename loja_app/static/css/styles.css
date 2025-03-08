@@ -1,88 +1,43 @@
-{% load static %}
+/* Barra lateral esquerda */
+.sidebar {
+    width: 250px;
+    background-color: #2E8B57; /* Cor verde-mata */
+    padding: 20px;
+    color: white;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Bem-vindo ao Nutri Amorim{% endblock %}</title>
-    <style>
-        body {
-            display: flex;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+/* Conteúdo principal */
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    flex-grow: 1;
+}
 
-        /* Barra lateral esquerda */
-        .sidebar {
-            width: 250px;
-            background-color: #2E8B57; /* Cor verde-mata */
-            padding: 20px;
-            color: white;
-            position: fixed;
-            height: 100%;
-            top: 0;
-            left: 0;
-        }
+/* Centralizando a imagem dentro do conteúdo */
+.center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; /* Ajuste se necessário */
+}
 
-        /* Conteúdo principal */
-        .content {
-            margin-left: 270px;
-            padding: 20px;
-            flex-grow: 1;
-        }
+.center-image img {
+    max-width: 100%; /* Impede que a imagem ultrapasse os limites da tela */
+    height: auto; /* Mantém a proporção da imagem */
+}
 
-        h1 {
-            font-size: 2em;
-        }
+h1 {
+    font-size: 2em;
+}
 
-        p {
-            font-size: 1.2em;
-        }
+p {
+    font-size: 1.2em;
+}
 
-        h2 {
-            color: #2E8B57;
-        }
-
-        /* Centralizando a imagem "Imagem 1" */
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-    </style>
-</head>
-<body>
-    <!-- Barra lateral esquerda -->
-    <div class="sidebar">
-        <div class="logo">
-            <img src="{% static 'img/logonutri.png' %}" alt="LogoNutri" />
-        </div>
-
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="{% url 'receitas_medicinais' %}" style="color: white; text-decoration: none;">Receitas Medicinais</a></li>
-            <li><a href="{% url 'pesquisas_cientificas' %}" style="color: white; text-decoration: none;">Pesquisas Científicas</a></li>
-            <li><a href="{% url 'quem_sou_eu' %}" style="color: white; text-decoration: none;">Quem Sou Eu</a></li>
-            <li><a href="{% url 'quem_somos_nos' %}" style="color: white; text-decoration: none;">Quem Somos Nós</a></li>
-        </ul>
-    </div>
-
-    <!-- Conteúdo principal -->
-    <div class="content">
-        {% block content %}
-            <div class="image-container">
-                <img src="{% static 'loja_app/img/imagem1.jpg' %}" alt="Imagem 1" />
-            </div>
-        {% endblock %}
-    </div>
-</body>
-</html>
+h2 {
+    color: #2E8B57;
+}
