@@ -16,8 +16,9 @@
 }
 
 .sidebar li {
-    padding: 10px;
-    text-align: left;
+    margin: 20px 0;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
 }
 
 .sidebar a {
