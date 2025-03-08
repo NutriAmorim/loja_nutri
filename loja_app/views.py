@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def boas_vindas(request):
-    return render(request, 'boas_vindas.html')
+    return render(request, 'loja_app/boas_vindas.html')
 
 def receitas_medicinais(request):
     return render(request, 'receitas_medicinais.html')

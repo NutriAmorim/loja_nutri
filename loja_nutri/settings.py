@@ -47,10 +47,8 @@ ROOT_URLCONF = 'loja_nutri.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            BASE_DIR / 'templates',
-        ],
-        'APP_DIRS': True,  # Verifique se isso está habilitado
+        'DIRS': [BASE_DIR / 'templates'],  # Se você deseja ter templates fora dos apps
+        'APP_DIRS': True,  # Isso diz ao Django para procurar templates dentro dos apps
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
