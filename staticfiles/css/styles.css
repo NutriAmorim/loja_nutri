@@ -1,0 +1,63 @@
+/* Estilos para a barra lateral */
+.sidebar {
+    background-color: #006400;  /* verde-mata */
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    border-right: 2px solid black;  /* linha preta */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px; /* Garantir que a parte inferior também tenha espaço */
+}
+
+/* Estilos para a logo */
+.logo {
+    margin-bottom: 30px;  /* Espaçamento abaixo da logo */
+}
+
+.logo img {
+    width: 80%;  /* Ajusta o tamanho da logo */
+    max-width: 150px;  /* Largura máxima */
+}
+
+/* Título do menu */
+.sidebar h2 {
+    color: white;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Estilos para a lista de menu */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar li {
+    margin: 15px 0;  /* Espaçamento entre os itens do menu */
+    text-align: center;  /* Centraliza os itens */
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #004d00;  /* Tom mais escuro de verde */
+}
+
+/* Estilo para o conteúdo */
+.content {
+    margin-left: 260px;
+    padding: 20px;
+}
