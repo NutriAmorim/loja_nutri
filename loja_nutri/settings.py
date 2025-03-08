@@ -18,7 +18,7 @@ SECRET_KEY = 'django-insecure-%z7ylaeym@nbj5r+-8ccoyg8)tv92a#y(q_j1(_+#a@ur1=&kk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nutriapp-8471211a02af.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'nutriapp.herokuapp.com']
 
 # Application definition
 
@@ -47,7 +47,7 @@ ROOT_URLCONF = 'loja_nutri.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-           'DIRS': [BASE_DIR / 'loja_app' / 'templates'],
+        'DIRS': [str(BASE_DIR / 'loja_app' / 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
