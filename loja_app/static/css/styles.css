@@ -8,12 +8,16 @@
     left: 0;
     padding-top: 20px;
     border-right: 2px solid black;  /* linha preta */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px; /* Garantir que a parte inferior também tenha espaço */
 }
 
 /* Estilos para a logo */
 .sidebar .logo {
-    width: 100px;  /* ajuste o tamanho da logo conforme necessário */
-    margin-bottom: 40px;  /* espaço abaixo da logo */
+    width: 100px;  /* Ajuste o tamanho da logo conforme necessário */
+    margin-bottom: 50px;  /* Espaço maior abaixo da logo */
 }
 
 /* Estilos para a lista do menu */
@@ -21,17 +25,13 @@
     list-style-type: none;
     padding: 0;
     width: 100%;
+    margin-top: 20px; /* Adicionando um pequeno espaço extra no topo do menu */
 }
 
 /* Estilos para os itens do menu */
 .sidebar li {
-    margin: 30px 0;  /* aumenta o espaçamento entre os itens */
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.sidebar li:not(:last-child) {
-    border-bottom: 1px solid #fff;  /* borda entre os itens */
+    margin-bottom: 40px;  /* Aumentando o espaçamento entre os itens */
+    text-align: center;  /* Garantir que os itens do menu fiquem centralizados */
 }
 
 /* Estilos para os links do menu */
@@ -39,12 +39,12 @@
     color: white;
     text-decoration: none;
     display: block;
-    padding: 10px 0;  /* ajuste o espaçamento entre os links */
+    padding: 10px 0;
     text-align: center;
 }
 
 .sidebar a:hover {
-    background-color: #004d00;  /* tom mais escuro de verde */
+    background-color: #004d00;  /* Tom mais escuro de verde */
 }
 
 /* Estilos para o conteúdo */
