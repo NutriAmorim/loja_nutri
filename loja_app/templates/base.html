@@ -29,12 +29,6 @@
             left: 0;
         }
 
-        /* Barra lateral superior */
-        .sidebar-header {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-
         /* Conteúdo principal */
         .content {
             margin-left: 270px;
@@ -54,48 +48,33 @@
             color: #2E8B57;
         }
 
-        /* Estilo do botão de menu */
-        .menu-button {
-            color: white;
+        .button {
+            display: block;
+            width: 100%;
             background-color: #2E8B57;
+            color: white;
             padding: 10px;
             margin-bottom: 20px;
             text-align: center;
-            display: block;
-            font-size: 1.2em;
             text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
         }
 
-        .menu-button:hover {
-            background-color: #1e6a40;
-        }
-
-        /* Imagens e textos explicativos */
-        .image-container {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .image-container img {
-            width: 100%;
-            max-width: 300px;
-            margin-bottom: 20px;
-        }
-
-        .image-container .image-text {
-            max-width: 300px;
-            font-size: 1.1em;
+        .button:hover {
+            background-color: #1C6E44;
         }
     </style>
 </head>
 <body>
     <!-- Barra lateral esquerda -->
     <div class="sidebar">
-        <div class="sidebar-header">
-            Menu
-        </div>
+        <h2>Menu</h2>
 
+        <!-- Botão Página Inicial -->
+        <a href="{% url 'home' %}" class="button">Página Inicial</a>
+
+        <!-- Lista de links -->
         <ul>
             <li><a href="{% url 'receitas_medicinais' %}" style="color: white; text-decoration: none;">Receitas Medicinais</a></li>
             <li><a href="{% url 'pesquisas_cientificas' %}" style="color: white; text-decoration: none;">Pesquisas Científicas</a></li>
@@ -108,22 +87,11 @@
     <div class="content">
         <h1>Bem-vindo ao Nutri Amorim!</h1>
         
-        <!-- Botão de menu para exibir imagens -->
-        <a href="#imagens" class="menu-button">Mostrar Imagens de Receitas Medicinais</a>
-
-        <div id="imagens" class="image-container">
-            <div>
-                <img src="{% static 'img/diferencas-entre-tecnico-em-nutricao-e-nutricionista.webp' %}" alt="Diferenças entre Técnico e Nutricionista">
-                <p class="image-text">A imagem acima mostra as diferenças entre o técnico em nutrição e o nutricionista, profissionais com diferentes competências e funções na área da saúde.</p>
-            </div>
-            <div>
-                <img src="{% static 'img/profissional-de-nutricao.webp' %}" alt="Profissional de Nutrição">
-                <p class="image-text">O profissional de nutrição é fundamental para a promoção de uma alimentação saudável e equilibrada, atuando em diversas áreas da saúde.</p>
-            </div>
-            <div>
-                <img src="{% static 'img/saude-e-nutricao.png' %}" alt="Saúde e Nutrição">
-                <p class="image-text">A saúde e nutrição estão intimamente relacionadas, e uma dieta balanceada é essencial para o bem-estar geral do corpo humano.</p>
-            </div>
+        <!-- Exibindo as imagens -->
+        <div>
+            <img src="{% static 'img/diferencas-entre-tecnico-em-nutricao-e-nutricionista.webp' %}" alt="Diferenças entre Técnico e Nutricionista" style="width: 100%; max-width: 600px; margin-bottom: 20px;">
+            <img src="{% static 'img/profissional-de-nutricao.webp' %}" alt="Profissional de Nutrição" style="width: 100%; max-width: 600px; margin-bottom: 20px;">
+            <img src="{% static 'img/saude-e-nutricao.png' %}" alt="Saúde e Nutrição" style="width: 100%; max-width: 600px; margin-bottom: 20px;">
         </div>
 
         {% block content %}
