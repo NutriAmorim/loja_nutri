@@ -25,13 +25,14 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 SECRET_KEY = 'django-insecure-%z7ylaeym@nbj5r+-8ccoyg8)tv92a#y(q_j1(_+#a@ur1=&kk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False  # Em produção, altere para False
 
 ALLOWED_HOSTS = ['nutriapp-8471211a02af.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',  # Adiciona essa linha para usar o WhiteNoise no desenvolvimento
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
