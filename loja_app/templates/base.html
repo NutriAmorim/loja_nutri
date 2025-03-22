@@ -47,7 +47,47 @@
         h2 {
             color: #2E8B57;
         }
+
+        /* Estilo para o botão */
+        .menu-btn {
+            background-color: #2E8B57; 
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .menu-btn:hover {
+            background-color: #1e703d;
+        }
+
+        /* Imagens escondidas inicialmente */
+        .menu-images {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .menu-images img {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
     </style>
+
+    <script>
+        // Função para alternar a visibilidade das imagens
+        function toggleImages() {
+            var images = document.getElementById("menu-images");
+            if (images.style.display === "none" || images.style.display === "") {
+                images.style.display = "block";
+            } else {
+                images.style.display = "none";
+            }
+        }
+    </script>
+
 </head>
 <body>
     <!-- Barra lateral esquerda -->
@@ -61,18 +101,22 @@
             <li><a href="{% url 'quem_sou_eu' %}" style="color: white; text-decoration: none;">Quem Sou Eu</a></li>
             <li><a href="{% url 'quem_somos_nos' %}" style="color: white; text-decoration: none;">Quem Somos Nós</a></li>
         </ul>
+
+        <!-- Botão para exibir as imagens -->
+        <button class="menu-btn" onclick="toggleImages()">Mostrar Imagens de Receitas Medicinais</button>
+
+        <!-- Imagens escondidas inicialmente -->
+        <div id="menu-images" class="menu-images">
+            <img src="{% static 'img/diferencas-entre-tecnico-em-nutricao-e-nutricionista.webp' %}" alt="Diferenças entre Técnico e Nutricionista">
+            <img src="{% static 'img/profissional-de-nutricao.webp' %}" alt="Profissional de Nutrição">
+            <img src="{% static 'img/saude-e-nutricao.png' %}" alt="Saúde e Nutrição">
+        </div>
+
     </div>
 
     <!-- Conteúdo principal -->
     <div class="content">
         <h1>Bem-vindo ao Nutri Amorim!</h1>
-        
-        <!-- Exibindo as imagens -->
-        <div>
-            <img src="{% static 'img/diferencas-entre-tecnico-em-nutricao-e-nutricionista.webp' %}" alt="Diferenças entre Técnico e Nutricionista" style="width: 100%; max-width: 600px; margin-bottom: 20px;">
-            <img src="{% static 'img/profissional-de-nutricao.webp' %}" alt="Profissional de Nutrição" style="width: 100%; max-width: 600px; margin-bottom: 20px;">
-            <img src="{% static 'img/saude-e-nutricao.png' %}" alt="Saúde e Nutrição" style="width: 100%; max-width: 600px; margin-bottom: 20px;">
-        </div>
 
         {% block content %}
         {% endblock %}
