@@ -19,9 +19,6 @@ STATICFILES_DIRS = [
 # Usando WhiteNoise para servir arquivos estáticos em produção
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'default_secret_key')
 
@@ -75,7 +72,7 @@ WSGI_APPLICATION = 'loja_nutri.wsgi.application'
 
 # Database
 DATABASES = {
-    'default': dj_database_url.config(default='postgres://localhost:5432/seu_banco_de_dados')
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
 
 # Password validation
